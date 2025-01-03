@@ -5,6 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Allen Yu - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            background: linear-gradient(to right, #e0eafc, #cfdef3);
+        }
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+            transition: background 0.3s;
+        }
+        nav ul li a:hover {
+            background: #007bff;
+            border-radius: 5px;
+        }
+        section {
+            padding: 100px 0;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-in-out;
+        }
+        section.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        #about, #projects, #experience, #contact {
+            text-align: center;
+            padding: 60px 20px;
+        }
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .project-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .project-item {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .project-item:hover {
+            transform: translateY(-10px);
+        }
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -24,7 +107,7 @@
     <section id="about">
         <div class="container">
             <h2>About Me</h2>
-            <p>Hello! I'm Allen Yu, an aspiring data scientist with a passion for artificial intelligence, machine learning, and NLP. Currently pursuing a Master of IT in Business at SMU, I enjoy building impactful solutions that merge technology and creativity. In my free time, I love playing the piano, shooting hoops on the basketball court, and swimming to stay active and refreshed.</p>
+            <p>Hello! I'm Allen Yu, an aspiring data scientist with a passion for artificial intelligence, machine learning, and NLP...</p>
         </div>
     </section>
 
@@ -34,30 +117,23 @@
             <div class="project-list">
                 <div class="project-item">
                     <h3>Loan Default Prediction</h3>
-                    <p>Developed a predictive model to help banks assess loan default risk using Python 3. Trained several models, including Logistic Regression, K-Nearest Neighbors, Support Vector Machine, XGBoost, TabNetClassifier, and LightGBM.</p>
-                    <p>Applied feature engineering and hyperparameter tuning, achieving a maximum AUC score of 0.78 with the best-performing model.</p>
-                    <p><a href="#" target="_blank">View Repository</a></p>
+                    <p>Developed a predictive model to help banks assess loan default risk using Python 3...</p>
                 </div>
                 <div class="project-item">
                     <h3>Malware Detection</h3>
-                    <p>Built a classification model to detect malware in uploaded files using Jupyter Notebook. Leveraged various algorithms such as Logistic Regression, Decision Trees, and ensemble methods (XGBoost, AdaBoost, and Voting Classifier).</p>
-                    <p>After extensive hyperparameter optimization, the model achieved a 0.99 F1 score, demonstrating high precision and recall.</p>
-                    <p><a href="#" target="_blank">View Repository</a></p>
+                    <p>Built a classification model to detect malware in uploaded files using Jupyter Notebook...</p>
                 </div>
                 <div class="project-item">
                     <h3>QR Code Phishing Link Detection</h3>
-                    <p>Developed a machine learning system on AWS SageMaker to identify phishing QR codes. Trained the model using XGBoost, achieving an F1 score of 0.98.</p>
-                    <p><a href="#" target="_blank">View Repository</a></p>
+                    <p>Developed a machine learning system on AWS SageMaker to identify phishing QR codes...</p>
                 </div>
                 <div class="project-item">
                     <h3>Chinese Literature Translation</h3>
-                    <p>Fine-tuned large language models, including QWEN and Mistral, for the translation of Chinese literary works. Significant improvements in BLEU and ROUGE-L scores were observed, demonstrating better translation quality.</p>
-                    <p><a href="#" target="_blank">View Repository</a></p>
+                    <p>Fine-tuned large language models, including QWEN and Mistral, for the translation of Chinese literary works...</p>
                 </div>
                 <div class="project-item">
                     <h3>CT Scan Image Segmentation</h3>
-                    <p>Explored U-Net architectures for semantic segmentation of medical CT scan images. Achieved a mean Intersection over Union (mIoU) score of 0.90, indicating high segmentation accuracy across multiple classes.</p>
-                    <p><a href="#" target="_blank">View Repository</a></p>
+                    <p>Explored U-Net architectures for semantic segmentation of medical CT scan images...</p>
                 </div>
             </div>
         </div>
@@ -67,32 +143,8 @@
         <div class="container">
             <h2>Experience</h2>
             <ul>
-                <li>
-                    <h3>Elastic NV – Hong Kong</h3>
-                    <p><em>A software company that provides an all-in-one solution for Search, Observability, and Security</em></p>
-                    <h4>Acting Team Leader ASEAN/HK (May 2022 – Dec 2022)</h4>
-                    <ul>
-                        <li>Overhauled the onboarding program, significantly reduced new hire learning curves, and boosted employee productivity.</li>
-                        <li>Led and mentored the ASEAN/HK Team through weekly operations and skills development sessions, resulting in improved team morale, adherence to SOPs, and KPI achievements.</li>
-                        <li>Collaborated with cross-functional team leaders in marketing, sales, legal, and sales support to facilitate seamless operational coordination, SOP changes, and daily activities.</li>
-                        <li>Presented and analyzed the team’s performance at weekly Sales Leadership meetings, ensuring the team hits KPI.</li>
-                    </ul>
-                    <h4>Sales Development Representative/Senior Sales Development Representative (Jan 2021 – May 2022)</h4>
-                    <ul>
-                        <li>Established and maintained an information repository, improving operational efficiency and enhancing data organization.</li>
-                        <li>Gained experience in complete sales cycle management, from Lead Generation to Pricing.</li>
-                        <li>Awarded "Top SDR for FY22" within Team APAC, reflecting outstanding performance and dedication.</li>
-                    </ul>
-                </li>
-                <li>
-                    <h3>Bank of China (Hong Kong) – Hong Kong</h3>
-                    <h4>Business Analyst (Contract) (Aug 2018 – Dec 2019)</h4>
-                    <ul>
-                        <li>Collaborated with team leads to map requirements and develop a comprehensive testing plan.</li>
-                        <li>Documented intricate functional specifics, test cases, and workflows across diverse systems for future projects.</li>
-                        <li>Orchestrated collaboration with developers, conducting ad hoc testing, user acceptance (UAT), system integration (SIT), and regression testing to meet requirements and increase operational efficiency.</li>
-                    </ul>
-                </li>
+                <li><h3>Elastic NV – Hong Kong</h3></li>
+                <li><h3>Bank of China (Hong Kong) – Hong Kong</h3></li>
             </ul>
         </div>
     </section>
@@ -111,5 +163,24 @@
             <p>&copy; 2024 Allen Yu. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // Add fade-in effect on scroll
+        const sections = document.querySelectorAll('section');
+        const options = {
+            threshold: 0.25
+        };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, options);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
 </body>
 </html>
