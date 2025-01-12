@@ -7,72 +7,6 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* Main container for the showcase */
-        .project-showcase {
-        display: flex;
-        align-items: start;
-        padding: 20px;
-        background-color: #fff; /* White background for the component */
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Optional shadow for aesthetics */
-        width: 1000px; /* Optional width constraint */
-        height: 330px;
-        margin: auto; /* Center the component horizontally */
-        margin-top: 60px;
-        margin-bottom: 90px;
-        position: relative; /* Ensure relative positioning for the parent */
-        }
-
-        .image-section img {
-        width: 630px;
-        height: 300px;
-        transform: translateY(30);
-        border-radius: 10px;
-        object-fit: cover; /* Ensures the image fits nicely */
-        }
-
-        /* Right Section: Text */
-        .text-section {
-        margin-bottom: auto;
-        position: relative; /* Allows absolute positioning of child elements */
-        margin-left: 25px;
-        margin-top: 10px;
-        }
-
-        .text-section h2 {
-        font-size: 24px;
-        font-weight: bold;
-        margin-bottom: 10px;
-        }
-
-        .text-section li {
-        font-size: 18px;
-        color: #000000;
-        line-height: 1.3;
-        margin-left: 20px;
-        }
-
-        .view-project {
-        padding: 10px 20px;
-        font-size: 1rem;
-        color: #ffffff;
-        background-color: #b79cfa; /* Primary button color */
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        position: absolute;
-        bottom: 0; /* Adjust this value to move the button further down */
-        margin-bottom: 10px;
-        right: 20px; /* Stays 10px from the right of the container */
-        }
-
-        .view-project:hover {
-        background-color: #fff; /* White background on hover */
-        color: #000; /* Black text on hover */
-        border: 1px solid #000; /* Optional: Add a black border for better visibility */
-        transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition effect */
-        }
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
@@ -234,21 +168,7 @@
             </div>
         </div>
     </div>
-    <div class="project-showcase">
-        <div class="image-section">
-            <img src="UNetting_The_Longtail.webp">
-        </div>
-    
-        <div class="text-section">
-            <h2>Spotify-to-MP3 Playlist Downloader</h2>
-            <ul>
-                <li>API Integration and Usage</li>
-                <li>Automation with Scripting</li>
-                <li>Metadata Embedding and File Management</li>
-            </ul>
-        </div>
-        <button class="view-project" onclick="alert('View Project button clicked!')">View Project</button>
-    </div>
+
     <div class="about-card">
         <h2>Projects</h2>
         <div class="project-list">
