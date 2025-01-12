@@ -16,7 +16,7 @@
             background: linear-gradient(to right, #e0eafc, #cfdef3);
         }
         header {
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0);
             color: #fff;
             padding: 20px 0;
             position: fixed;
@@ -28,7 +28,7 @@
         .container {
             width: 90%;
             margin: auto;
-            display: flex;
+            display: flex;  
             justify-content: space-between;
             align-items: center;
         }
@@ -86,10 +86,21 @@
         .about-card {
             background: #fff;
             padding: 40px;
-            border-radius: 10px;
+            border-radius: 50px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             max-width: 800px;
-            margin: 100px auto 0 auto;
+            margin: 20px auto 0 auto;
+        }
+        .about-card-small {
+            background: #fff;
+            padding: 40px;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 20px auto 0 auto;
+        }
+        .about-card-small:hover {
+            transform: translateY(-10px);
         }
         footer {
             background: rgba(0, 0, 0, 0.8);
@@ -100,11 +111,19 @@
         .experience-item {
             text-align: left;
             margin-bottom: 40px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .experience-item:hover {
+            transform: translateY(-10px);
         }
         .experience-item h3 {
             font-size: 1.5em;
             margin-bottom: 10px;
-            color: #007bff;
+            color: #000000;
         }
         .experience-item h4 {
             font-size: 1.2em;
@@ -118,10 +137,16 @@
         .footer {
             margin-top: 30px;
         }
+        .about-card-container {
+            display: flex;
+            flex-direction: column;
+            padding-top: 150px;
+        }
+
     </style>
 </head>
 <body>
-    <header>
+    <header class="header">
         <div class="container">
             <h1>Allen Yu</h1>
             <nav>
@@ -135,10 +160,12 @@
         </div>
     </header>
 
-    <div class="about-card">
-        <h2>About Me</h2>
+    <div class="about-card-container">
         <div class="about-card">
-            <p>Hello! I'm Allen, an aspiring data scientist with a deep interest in creating AI-driven solutions that can solve complex tasks. When I'm not working on data and code, I enjoy playing piano, basketball, and swimming. These hobbies help me stay active and balanced, which I find essential when tackling challenging problems. I'm constantly driven by curiosity and a desire to learn and contribute to cutting-edge AI development.</p>
+            <h2>About Me</h2>
+            <div class="about-card-small">
+                <p>Hello! I'm Allen, an aspiring data scientist with a deep interest in creating AI-driven solutions that can solve complex tasks. When I'm not working on data and code, I enjoy playing piano, basketball, and swimming. These hobbies help me stay active and balanced, which I find essential when tackling challenging problems. I'm constantly driven by curiosity and a desire to learn and contribute to cutting-edge AI development.</p>
+            </div>
         </div>
     </div>
 
@@ -199,10 +226,12 @@
         
     <div class="about-card">
         <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:allen.yu.2023@mitb.smu.edu.sg">allen.yu.2023@mitb.smu.edu.sg</a></p>
+        <p>Email: <a href="mailto:yuallen1994@gmail.com">yuallen1994@gmail.com</a></p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/yuallen94/" target="_blank">My LinkedIn</a></p>
         <p>GitHub: <a href="https://github.com/allen123123yu" target="_blank">My GitHub</a></p>
     </div>
+
+    
 
     <footer class = "footer">
         <div class="container">
