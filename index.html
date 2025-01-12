@@ -7,6 +7,61 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
+        .project-showcase {
+            display: flex;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 800px;
+            max-width: 100%;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .image-section {
+            width: 50%;
+        }
+
+        .image-section img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .text-section {
+            padding: 20px;
+            width: 50%;
+        }
+
+        .text-section h2 {
+            margin: 0 0 10px 0;
+            font-size: 1.5em;
+        }
+
+        .text-section ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .text-section ul li {
+            margin-bottom: 5px;
+        }
+
+        .view-project {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #b388ff;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .view-project:hover {
+            background: #7c4dff;
+        }
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
@@ -168,7 +223,21 @@
             </div>
         </div>
     </div>
-
+    <div class="project-showcase">
+        <div class="image-section">
+            <img src="your-image-url.jpg" alt="Spotify-to-MP3 Playlist Downloader">
+        </div>
+    
+        <div class="text-section">
+            <h2>Spotify-to-MP3 Playlist Downloader</h2>
+            <ul>
+                <li>API Integration and Usage</li>
+                <li>Automation with Scripting</li>
+                <li>Metadata Embedding and File Management</li>
+            </ul>
+        </div>
+        <button class="view-project" onclick="alert('View Project button clicked!')">View Project</button>
+    </div>
     <div class="about-card">
         <h2>Projects</h2>
         <div class="project-list">
