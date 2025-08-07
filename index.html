@@ -1,261 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Allen Yu - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-            background: linear-gradient(to right, #e0eafc, #cfdef3);
-        }
-        header {
-            background: rgba(0, 0, 0);
-            color: #fff;
-            padding: 20px 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-        }
-        .container {
-            width: 90%;
-            margin: auto;
-            display: flex;  
-            justify-content: space-between;
-            align-items: center;
-        }
-        nav ul {
-            list-style-type: none;
-            display: flex;
-            gap: 20px;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            padding: 5px 10px;
-            transition: background 0.3s;
-        }
-        nav ul li a:hover {
-            background: #007bff;
-            border-radius: 5px;
-        }
-        section {
-            padding: 180px 0 60px 0;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease-in-out;
-        }
-        section.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        #about, #projects, #experience, #contact {
-            text-align: center;
-            padding: 60px 20px;
-        }
-        h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: #333;
-        }
-        .project-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            justify-content: center;
-            padding: 20px 0;
-        }
-        .project-item {
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-        .project-item:hover {
-            transform: translateY(-10px);
-        }
-        .about-card {
-            background: #fff;
-            padding: 40px;
-            border-radius: 50px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
-            margin: 20px auto 0 auto;
-        }
-        .about-card-small {
-            background: #fff;
-            padding: 40px;
-            border-radius: 50px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
-            margin: 20px auto 0 auto;
-        }
-        .about-card-small:hover {
-            transform: translateY(-10px);
-        }
-        footer {
-            background: rgba(0, 0, 0, 0.8);
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-        }
-        .experience-item {
-            text-align: left;
-            margin-bottom: 40px;
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-        .experience-item:hover {
-            transform: translateY(-10px);
-        }
-        .experience-item h3 {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-            color: #000000;
-        }
-        .experience-item h4 {
-            font-size: 1.2em;
-            margin-bottom: 10px;
-        }
-        .experience-item ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Allen YU - Homepage</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
 
-        .footer {
-            margin-top: 30px;
-        }
-        .about-card-container {
-            display: flex;
-            flex-direction: column;
-            padding-top: 150px;
-        }
-
-    </style>
-</head>
-<body>
-    <header class="header">
-        <div class="container">
-            <h1>Allen Yu</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <div class="about-card-container">
-        <div class="about-card">
-            <h2>About Me</h2>
-            <div class="about-card-small">
-                <p>Hello! I'm Allen, an aspiring data scientist with a deep interest in creating AI-driven solutions that can solve complex tasks. When I'm not working on data and code, I enjoy playing piano, basketball, and swimming. These hobbies help me stay active and balanced, which I find essential when tackling challenging problems. I'm constantly driven by curiosity and a desire to learn and contribute to cutting-edge AI development.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="about-card">
-        <h2>Projects</h2>
-        <div class="project-list">
-            <div class="project-item">
-                <h3>Loan Default Prediction</h3>
-                <p>Developed a predictive model to help banks assess loan default risk using Python 3.</p>
-            </div>
-            <div class="project-item">
-                <h3>Malware Detection</h3>
-                <p>Built a classification model to detect malware in uploaded files using Jupyter Notebook.</p>
-            </div>
-            <div class="project-item">
-                <h3>QR Code Phishing Link Detection</h3>
-                <p>Developed a machine learning system on AWS SageMaker to identify phishing QR codes.</p>
-            </div>
-            <div class="project-item">
-                <h3>Chinese Literature Translation</h3>
-                <p>Fine-tuned large language models, including QWEN and Mistral, for the translation of Chinese literary works.</p>
-            </div>
-            <div class="project-item">
-                <h3>CT Scan Image Segmentation</h3>
-                <p>Explored U-Net architectures for semantic segmentation of medical CT scan images.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="about-card">
-        <h2>Experience</h2>
-        <div class="experience-item">
-            <h3>Elastic NV - Hong Kong</h3>
-            <h4>Acting Team Leader ASEAN/HK (May 2022 - Dec 2022)</h4>
-            <ul>
-                <li>Overhauled the onboarding program, significantly reducing new hire learning curves and boosting employee productivity.</li>
-                <li>Led and mentored the ASEAN/HK team through weekly operations and skills development sessions, resulting in improved team morale and KPI achievements.</li>
-                <li>Collaborated with cross-functional teams (marketing, sales, legal) to facilitate seamless coordination and operational improvements.</li>
-                <li>Presented and analyzed team performance at weekly Sales Leadership meetings to ensure KPI targets were met.</li>
-            </ul>
-            <h4>Sales Development Representative/Senior SDR (Jan 2021 - May 2022)</h4>
-            <ul>
-                <li>Established and maintained an information repository to improve operational efficiency and data organization.</li>
-                <li>Gained experience in complete sales cycle management, from lead generation to pricing.</li>
-                <li>Awarded "Top SDR for FY22" within Team APAC, reflecting outstanding performance and dedication.</li>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-S6ERP4SC75"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-S6ERP4SC75");
+    </script>
+  </head>
+  <link rel="icon" href="A.png" type="image/png" />
+  <body>
+    <nav class="main-nav">
+        <div class="nav-content">
+            <a href="#about" class="nav-logo">Allen Yu</a>
+            <ul class="nav-links">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#credentials">Credentials</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
             </ul>
         </div>
-        <div class="experience-item">
-            <h3>Bank of China (Hong Kong) - Hong Kong</h3>
-            <h4>Business Analyst (Contract) (Aug 2018 - Dec 2019)</h4>
-            <ul>
-                <li>Collaborated with team leads to map requirements and develop comprehensive testing plans.</li>
-                <li>Documented intricate functional specifics, test cases, and workflows across diverse systems for future projects.</li>
-                <li>Orchestrated collaboration with developers, conducting ad hoc testing, UAT, SIT, and regression testing to meet requirements and improve operational efficiency.</li>
-            </ul>
-        </div>
-    </div>
-        
-    <div class="about-card">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:yuallen1994@gmail.com">yuallen1994@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/yuallen94/" target="_blank">My LinkedIn</a></p>
-        <p>GitHub: <a href="https://github.com/allen123123yu" target="_blank">My GitHub</a></p>
-    </div>
+    </nav>
 
-    
-
-    <footer class = "footer">
-        <div class="container">
-            <p>&copy; 2024 Allen Yu. All rights reserved.</p>
+    <section id="about" class="section hero-section">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-text">
+            <!-- <h1 class="welcome-text">Hello, I'm</h1> -->
+            <h2 class="name">Allen Yu</h2>
+            <h3 class="title">Data Scientist | ML Engineer</h3>
+            <p class="about_me">Hello! I'm Allen, an aspiring data scientist with a deep interest in creating AI-driven solutions that can solve complex tasks. When I'm not working on data and code, I enjoy playing piano, basketball, and swimming. These hobbies help me stay active and balanced, which I find essential when tackling challenging problems. I'm constantly driven by curiosity and a desire to learn and contribute to cutting-edge AI development.</p>
+            <div class="cta-buttons">
+              <a href="cv.pdf" class="btn btn-outline" download>Download CV</a>
+            </div>
+            <div class="social-links">
+              <a
+                href="https://www.linkedin.com/in/yuallen94/"
+                target="_blank"
+                aria-label="LinkedIn"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a
+                href="https://github.com/allen123123yu"
+                target="_blank"
+                aria-label="GitHub"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <div class="about-image">
+            <img
+              src="profile.JPEG"
+              alt="Profile Picture"
+              class="profile-image"
+            />
+          </div>
         </div>
+      </div>
+    </section>
+
+    <section id="credentials" class="section">
+      <div class="container">
+        <h2><i class="fas fa-graduation-cap"></i> Credentials</h2>
+        <div class="credentials-content">
+
+          <div class="certificate-section">
+            <h3><i class="fas fa-medal"></i> Certificate</h3>
+            <div class="credential-item">
+              <h4>Data Science and Machine Learning Certificate </h4>
+              <p class="institution">XCELLERATE</p>
+              <p class="duration">Feb 2023 - Jul 2023</p>
+            </div>
+          </div>
+
+          <div class="education-section">
+            <h3><i class="fas fa-university"></i> Education</h3>
+
+            <div class="credential-item">
+              <h4>Master of IT in Business (Artificial Intelligence)</h4>
+              <p class="institution">SINGAPORE MANAGEMENT UNIVERSITY</p>
+              <p class="duration">Jan 2024 - Sept 2025</p>
+              <p class="achievement">MITB Scholarship AY2023-24</p>
+            </div>
+
+            <div class="credential-item">
+              <h4>Master of Science in IT Management </h4>
+              <p class="institution">CHINESE UNIVERSITY OF HONG KONG</p>
+              <p class="duration">Aug 2016 - Aug 2017</p>
+            </div>
+
+            <div class="credential-item">
+              <h4>Bachelor of Business Administration in Hotel and Tourism Management </h4>
+              <p class="institution">CHINESE UNIVERSITY OF HONG KONG</p>
+              <p class="duration">Aug 2012 - Jun 2016</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="container">
+        <h2><i class="fas fa-briefcase"></i> Experience</h2>
+        <div class="experience-content">
+          
+          <div class="work-section">
+            <h3><i class="fas fa-user-tie"></i> Work Experience</h3>
+            <div class="experience-item">
+              <div class="company-name">Elastic NV - Hong Kong</div>
+              <div class="company-description">A software company that provides an all in one solution for Search, Observability, and Security</div>
+              <div class="role">Sales Development Representative (Jan 2021 – May 2022)</div>
+              <div class="role">Acting Team Leader ASEAN/HK (May 2022 – Dec 2022)</div>
+              <div class="duration">Jan 2021 - Dec 2022</div>
+              <div class="achievements">
+                  <ul>
+                      <li>Led the ASEAN/HK team, leveraging data-driven strategies and advanced performance analysis to optimize workflows, enhance operational efficiency, achieve KPIs, and refine strategic decision-making</li>
+                      <li>Overhauled the onboarding program, reducing new hire learning curves by streamlining knowledge transfer and creating centralized data repositories</li>
+                      <li>Designed and implemented scalable processes to manage lead pipelines using automation tools to increase efficiency</li>
+                  </ul>
+              </div>
+            </div>
+          
+            <div class="experience-item">
+                <div class="company-name">Bank Of China (Hong Kong) - Hong Kong</div>
+                <div class="role">Business Analyst (Contract)</div>
+                <div class="duration">Aug 2018 - Dec 2019</div>
+                <div class="achievements">
+                    <ul>
+                        <li>Partnered with team leads to gather and analyze business requirements, translating them into detailed functional specifications and workflows</li>
+                        <li>Analyzed test results to identify issues, optimize processes, and recommend improvements, enhancing system performance and operational efficiency</li>
+                    </ul>
+                </div>
+            </div>
+          </div>
+
+          <div class="intern-section">
+            <h3><i class="fas fa-clipboard-list"></i> Intenship / TA Experience</h3>
+            <div class="experience-item">
+                <div class="company-name">Starhub - Singapore</div>
+                <div class="role">Data Science / ML Engineer Intern</div>
+                <div class="duration">May 2025 - Nov 2025</div>
+                <div class="achievements">
+                    <ul>
+                        <li>Optimized AI chatbot prompt engineering flows to improve relevance and insight quality</li>
+                        <li>Synergized with Sales and Engineering to shape content flow and test JSON templates for LLM dashboard POC</li>
+                        <li>Wrote data ingestion and orchestration scripts using LangSmith to automate insight generation via LLM agents</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="experience-item">
+                <div class="company-name">SMU - Singapore</div>
+                <div class="role">Teaching Assistant</div>
+                <div class="duration">Apr 2025 - Jul 2025</div>
+                <div class="achievements">
+                    <ul>
+                        <li>Support professor in facilitating classes and lab sessions, and handling administrative responsibilities</li>
+                    </ul>
+                </div>
+            </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h2><i class="fas fa-code-branch"></i> Projects</h2>
+        <div class="project-content">
+          <div class="projects-grid">
+            <div class="project-card">
+              <h3>UNetting the Longtail</h3>
+              <p><strong>Deep Learning / Image Segmentation</strong></p>
+              <ul class="project-desc">
+                <li>Experimented with U-Net architectures using ResNet34, ResNet50, and EfficientNet encoders, along with ensemble and model-saving techniques, for CT scan image segmentation and classification. </li>
+                <li>Achieved 0.90 mIoU through a mixture of augmentation techniques, loss functions, and hyperparameter tuning. </li>
+              </ul>
+              <div class="project-links">
+                <a href="#" class="btn">View Project</a>
+                <!-- <a href="#" class="btn btn-outline">GitHub</a> -->
+              </div>
+            </div>
+
+            <div class="project-card">
+              <h3>Looking Behind the Veil: QR Code Scanner with Phishing Link Detection</h3>
+              <p><strong>Machine Learning Engineering / AWS Sagemaker</strong></p>
+              <ul class="project-desc">
+                <li>Developed and deployed an end to end project on AWS Sagemaker, using Endpoint and Lamdba to identify phishing QR codes by extracting key features from the URL</li>
+                <li>Achieved an 98% F1 score using XGBoost after feature engineering and hyperparameter tuning </li>
+                <li>Designed a front end mobile application to let users upload an image or scan a QR code for phishing detection </li>
+              </ul>
+              <div class="project-links">
+                <a href="#" class="btn">View Project</a>
+                <!-- <a href="#" class="btn btn-outline">GitHub</a> -->
+              </div>
+            </div>
+
+            <div class="project-card">
+              <h3>Loan Default Prediction</h3>
+              <p><strong>Machine Learning</strong></p>
+              <ul class="project-desc">
+                <li>Created a model to assist banks in predicting whether a potential client will default on their loans using Python 3 </li>
+                <li>Trained Logistic Regression, KNN, SVM, XGBoost, TabNetClassifier, and LGBM, achieving 78% AUC score on the best model after feature engineering and hyperparameter tuning </li>
+              </ul>
+              <div class="project-links">
+                <a href="#" class="btn">View Project</a>
+                <!-- <a href="#" class="btn btn-outline">GitHub</a> -->
+              </div>
+            </div>
+
+            <div class="project-card">
+              <h3>Malware Detection</h3>
+              <p><strong>Machine Learning</strong></p>
+              <ul class="project-desc">
+                <li>Trained a model to detect malware in a received file for a classification issue using Jupyter Notebook </li>
+                <li>Used Logistic Regression, Decision Tree models, and ensemble methods XGBoost, AdaBoost and voting, achieving 99% F1 score after hyperparameter optimization </li>
+              </ul>
+              <div class="project-links">
+                <a href="#" class="btn">View Project</a>
+                <!-- <a href="#" class="btn btn-outline">GitHub</a> -->
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Allen Yu. All rights reserved.</p>
+      </div>
     </footer>
 
-    <script>
-        // Add fade-in effect on scroll
-        const sections = document.querySelectorAll('section');
-        const options = {
-            threshold: 0.25
-        };
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
-            });
-        }, options);
-
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-    </script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
